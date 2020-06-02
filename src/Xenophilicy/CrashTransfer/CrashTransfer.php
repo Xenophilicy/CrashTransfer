@@ -44,7 +44,10 @@ class CrashTransfer extends PluginBase implements Listener {
     public function onDisable(){
         $players = $this->getServer()->getLoggedInPlayers();
         if(sizeof($players) === 0) return;
-        if(!self::$settings["Warning"]["Enabled"]) return;
+        if(!self::$settings["Warning"]["Enabled"] || self::$settings["Warning"]["Delay"] <= 0){
+            $this->transferPlayers($players);
+            return;
+        }
         for($i = self::$settings["Warning"]["Delay"]; $i >= 0; $i--){
             if($i === 0){
                 $this->transferPlayers($players);
