@@ -1,0 +1,33 @@
+# MADE BY:
+#  __    __                                          __        __  __  __                     
+# /  |  /  |                                        /  |      /  |/  |/  |                    
+# $$ |  $$ |  ______   _______    ______    ______  $$ |____  $$/ $$ |$$/   _______  __    __ 
+# $$  \/$$/  /      \ /       \  /      \  /      \ $$      \ /  |$$ |/  | /       |/  |  /  |
+#  $$  $$<  /$$$$$$  |$$$$$$$  |/$$$$$$  |/$$$$$$  |$$$$$$$  |$$ |$$ |$$ |/$$$$$$$/ $$ |  $$ |
+#   $$$$  \ $$    $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |$$ |$$ |$$ |      $$ |  $$ |
+#  $$ /$$  |$$$$$$$$/ $$ |  $$ |$$ \__$$ |$$ |__$$ |$$ |  $$ |$$ |$$ |$$ |$$ \_____ $$ \__$$ |
+# $$ |  $$ |$$       |$$ |  $$ |$$    $$/ $$    $$/ $$ |  $$ |$$ |$$ |$$ |$$       |$$    $$ |
+# $$/   $$/  $$$$$$$/ $$/   $$/  $$$$$$/  $$$$$$$/  $$/   $$/ $$/ $$/ $$/  $$$$$$$/  $$$$$$$ |
+#                                         $$ |                                      /  \__$$ |
+#                                         $$ |                                      $$    $$/ 
+#                                         $$/                                        $$$$$$/
+VERSION: "1.0.0" # Internal use only
+
+# The target server is where the players will be sent when the server stops
+Server:
+  # This is the IP address of the target server
+  Address: play.xenoservers.net
+  # This is the port of the target server
+  Port: 19132
+
+# The warning message is what is sent right before players are transferred
+Warning:
+  # Choose whether to enable the warning message
+  Enabled: true
+
+  # Delay is the amount of time to pause before transferring players
+  # This value is in seconds (default is 3 seconds)
+  Delay: 3
+
+  # This is the message that should be sent to players
+  Message: "§cThe server has stopped, you will be transferred in 3 seconds!"
