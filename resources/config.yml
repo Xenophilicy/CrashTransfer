@@ -30,4 +30,5 @@ Warning:
   Delay: 3
 
   # This is the message that should be sent to players
-  Message: "§cThe server has stopped, you will be transferred in 3 seconds!"
+  # You can use {seconds-left} to show how many seconds are left before transferring
+  Message: "§cThe server has been stopped, you will be transferred to hub in {seconds-left} seconds!"

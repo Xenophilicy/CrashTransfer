@@ -16,6 +16,7 @@
 namespace Xenophilicy\CrashTransfer;
 
 use pocketmine\event\Listener;
+use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 
@@ -26,6 +27,7 @@ use pocketmine\utils\Config;
 class CrashTransfer extends PluginBase implements Listener {
     
     public static $settings;
+    public $taskIDs;
     
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
@@ -41,19 +43,31 @@ class CrashTransfer extends PluginBase implements Listener {
     
     public function onDisable(){
         $players = $this->getServer()->getLoggedInPlayers();
-        if(sizeof($players) > 0){
-            $this->getLogger()->notice("Transferring players...");
-            if(self::$settings["Warning"]["Enabled"]){
-                foreach($players as $player){
-                    $player->sendMessage(self::$settings["Warning"]["Message"]);
-                }
-                sleep(self::$settings["Warning"]["Delay"]);
+        if(sizeof($players) === 0) return;
+        if(!self::$settings["Warning"]["Enabled"]) return;
+        for($i = self::$settings["Warning"]["Delay"]; $i >= 0; $i--){
+            if($i === 0){
+                $this->transferPlayers($players);
+                return;
             }
             foreach($players as $player){
-                $player->transfer(self::$settings["Server"]["Address"], self::$settings["Server"]["Port"]);
-                $this->getLogger()->notice("Transferring " . $player->getName());
+                if(!$player instanceof Player) continue;
+                $player->sendMessage(str_replace("{seconds-left}", $i, CrashTransfer::$settings["Warning"]["Message"]));
             }
-            $this->getLogger()->notice("All players have been transferred!");
+            sleep(1);
         }
+    }
+    
+    /**
+     * @param array $players
+     */
+    public function transferPlayers(array $players){
+        $this->getLogger()->notice("Transferring players...");
+        foreach($players as $player){
+            if(!$player instanceof Player) continue;
+            $player->transfer(self::$settings["Server"]["Address"], self::$settings["Server"]["Port"]);
+            $this->getLogger()->notice("Transferring " . $player->getName());
+        }
+        $this->getLogger()->notice("All players have been transferred!");
     }
 }
