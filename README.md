@@ -3,6 +3,8 @@
 [![HitCount](http://hits.dwyl.io/Xenophilicy/CrashTransfer.svg)](http://hits.dwyl.io/Xenophilicy/CrashTransfer)
 [![Discord Chat](https://img.shields.io/discord/490677165289897995.svg)](https://discord.gg/hNVehXe)
 
+# [![Xenophilicy](https://file.xenoservers.net/Resources/GitHub-Resources/crashtransfer/screenshot.png)]()
+
 ## Information
 This plugin allows you to force players to transfer to your main lobby or hub server if the server they were playing on has been stopped or has crashed unexpectedly. You can set up your main lobby server in the config.yml file where players will be transferred to. You can also enable and configure a warning message to be sent to players right before the server stops and transfers them.
 
