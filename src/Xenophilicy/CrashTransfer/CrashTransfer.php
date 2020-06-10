@@ -35,13 +35,14 @@ class CrashTransfer extends PluginBase implements Listener {
         $this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
         self::$settings = $this->config->getAll();
         if(!is_numeric(self::$settings["Server"]["Port"])){
-            $this->getLogger()->critical("Target server port must be numeric! Plugin will remain disabled...");
+            $this->getLogger()->critical("Target server port must be numeric. Plugin will remain disabled...");
             $this->getServer()->getPluginManager()->disablePlugin($this);
         }
         $this->getLogger()->info("Transferring players to " . self::$settings["Server"]["Address"] . ":" . self::$settings["Server"]["Port"] . " on server stop");
     }
     
     public function onDisable(){
+        if($this->getServer()->isRunning()) return;
         $players = $this->getServer()->getLoggedInPlayers();
         if(sizeof($players) === 0) return;
         if(!self::$settings["Warning"]["Enabled"] || self::$settings["Warning"]["Delay"] <= 0){
@@ -71,6 +72,6 @@ class CrashTransfer extends PluginBase implements Listener {
             $player->transfer(self::$settings["Server"]["Address"], self::$settings["Server"]["Port"]);
             $this->getLogger()->notice("Transferring " . $player->getName());
         }
-        $this->getLogger()->notice("All players have been transferred!");
+        $this->getLogger()->notice("All players have been transferred");
     }
 }
