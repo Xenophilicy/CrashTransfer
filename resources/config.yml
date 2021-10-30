@@ -13,6 +13,11 @@
 #                                         $$/                                        $$$$$$/
 VERSION: "1.0.0" # Internal use only
 
+# Supported Languages
+# en (English)
+
+language: en
+
 # The target server is where the players will be sent when the server stops
 Server:
   # This is the IP address of the target server
