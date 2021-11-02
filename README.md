@@ -16,5 +16,5 @@ This plugin allows you to force players to transfer to your main lobby or hub se
 **DevTools → https://github.com/pmmp/PocketMine-DevTools** *(If you're running the plugin from source)*
 
 ## Credits
-* [Xenophilicy](https://github.com/Xenophilicy/) (Original Developer)
-* [Vecnavium](https://github.com/Vecnavium/) (Lonterm Maintainer)
+* [Xenophilicy](https://github.com/Xenophilicy/)
+* [Vecnavium](https://github.com/Vecnavium/) (Longterm Maintainer)
