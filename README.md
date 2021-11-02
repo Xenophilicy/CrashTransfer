@@ -1,4 +1,4 @@
-> # I have frozen my personal support for public plugins. The plugins will remain public on GitHub (though archived) for anyone that would like to keep them updated.  This my final decision on the matter. No support will be provided - you will be ignored - regardless of private or public inquiry.
+
 
 # CrashTransfer
 [![Poggit CrashTransfer](https://poggit.pmmp.io/shield.state/CrashTransfer)](https://poggit.pmmp.io/p/CrashTransfer)
@@ -18,4 +18,5 @@ This plugin allows you to force players to transfer to your main lobby or hub se
 **DevTools → https://github.com/pmmp/PocketMine-DevTools** *(If you're running the plugin from source)*
 
 ## Credits
-* [Xenophilicy](https://github.com/Xenophilicy/)
+* [Xenophilicy](https://github.com/Xenophilicy/) (Original Developer)
+* [Vecnavium](https://github.com/Vecnavium/) (Lonterm Maintainer)
