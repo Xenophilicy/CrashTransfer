@@ -1,5 +1,3 @@
-
-
 # CrashTransfer
 [![Poggit CrashTransfer](https://poggit.pmmp.io/shield.state/CrashTransfer)](https://poggit.pmmp.io/p/CrashTransfer)
 [![HitCount](http://hits.dwyl.io/Xenophilicy/CrashTransfer.svg)](http://hits.dwyl.io/Xenophilicy/CrashTransfer)
