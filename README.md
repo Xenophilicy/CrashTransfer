@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://github.com/Xenophilicy/CrashTransfer"><img src="https://github.com/Xenophilicy/CrashTransfer/blob/master/icon.png"></img></a><br>
-    <b>NaviCompass allows your players to transfer between your server network and worlds with simplicity.</b>
+    <b>A PocketMine plugin to transfer players when the server stops!</b>
 </p>
 
 <p align="center">
