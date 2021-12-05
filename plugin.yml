@@ -1,6 +1,6 @@
 name: CrashTransfer
 author: Xenophilicy
-version: 1.0.1
+version: 1.0.2
 description: Transfers players when the server stops
 main: Xenophilicy\CrashTransfer\CrashTransfer
 api: 4.0.0
