@@ -1,0 +1,17 @@
+---
+#English Language
+
+#Error Messages
+
+error:
+  serveripconfig: "Target server port must be numeric. Plugin will remain disabled.."
+
+#General Messages
+
+general:
+  transferingplayers: "Transferring players to the server "
+  transferinginprogress1: "Transferring players..."
+  transferinginprogress2: "Transferring "
+  transferedplayers: "All players have been transferred"
+
+---
